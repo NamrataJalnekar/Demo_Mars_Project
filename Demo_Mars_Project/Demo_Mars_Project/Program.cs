@@ -8,6 +8,9 @@ using OpenQA.Selenium.Interactions;
 //open the browser
 IWebDriver driver = new ChromeDriver();
 
+//maximize window
+driver.Manage().Window.Maximize();
+
 
 //launch the mars portal and navigate to sign in
 driver.Navigate().GoToUrl("http://localhost:5000/Home");
@@ -40,3 +43,31 @@ else
     Console.WriteLine("Log in unsuccessful");
 }
 
+
+
+//Create new languages record
+
+//Navigate languages tab
+IWebElement languageTab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
+languageTab.Click();
+
+//Click add new
+IWebElement addNewLanguageButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
+addNewLanguageButton.Click();
+
+//Enter details
+IWebElement addLanguage = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
+addLanguage.SendKeys("lang_test3");
+
+IWebElement languageLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
+languageLevel.Click();
+
+IWebElement basicLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
+basicLevel.Click();
+
+//Enter add(save) button
+IWebElement addButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
+addButton.Click();
+
+
+//Check if Language has been added successfully
