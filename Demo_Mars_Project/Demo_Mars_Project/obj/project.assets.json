@@ -1069,11 +1069,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\namra\\Documents\\Industry Connect\\Demo_Mars\\Demo_Mars_Project\\Demo_Mars_Project\\Demo_Mars_Project.csproj",
+      "projectUniqueName": "C:\\Users\\namra\\OneDrive\\Documents\\Industry Connect\\Demo_Mars\\Demo_Mars_Project\\Demo_Mars_Project\\Demo_Mars_Project.csproj",
       "projectName": "Demo_Mars_Project",
-      "projectPath": "C:\\Users\\namra\\Documents\\Industry Connect\\Demo_Mars\\Demo_Mars_Project\\Demo_Mars_Project\\Demo_Mars_Project.csproj",
+      "projectPath": "C:\\Users\\namra\\OneDrive\\Documents\\Industry Connect\\Demo_Mars\\Demo_Mars_Project\\Demo_Mars_Project\\Demo_Mars_Project.csproj",
       "packagesPath": "C:\\Users\\namra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\namra\\Documents\\Industry Connect\\Demo_Mars\\Demo_Mars_Project\\Demo_Mars_Project\\obj\\",
+      "outputPath": "C:\\Users\\namra\\OneDrive\\Documents\\Industry Connect\\Demo_Mars\\Demo_Mars_Project\\Demo_Mars_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\namra\\AppData\\Roaming\\NuGet\\NuGet.Config",

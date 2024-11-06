@@ -30,17 +30,40 @@ IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div
 loginButton.Click();
 
 
+//Applying Implicit Wait command for 10 seconds
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+////check if user logged in successfully
+//string newURL = driver.Url;
+////string newURL1 = driver.currentUrl;
+////string newURL2 = driver.getCurrentURL();
+
+//if (newURL == "http://localhost:5000/Account/Profile")
+//{
+//  Console.WriteLine("User logged in Successfully");
+//}
+//else
+//{
+//  Console.WriteLine("Log in unsuccessful");
+//Console.WriteLine(newURL);
+//}
+
+
+
+
+
 
 //check if user logged in successfully
-string newURL = driver.Url;
-
-if (newURL == "http://localhost:5000/Account/Profile")
+IWebElement ProfileName = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/div[1]/div[2]/div/span"));
+if (ProfileName.Text != null)
 {
-    Console.WriteLine("User logged in Successfully");
+    Console.WriteLine(ProfileName.Text);
+    Console.WriteLine("Login successful!!");
 }
 else
 {
-    Console.WriteLine("Log in unsuccessful");
+    Console.WriteLine(ProfileName.Text);
+    Console.WriteLine("Login Unsuccessful!!");
 }
 
 
@@ -57,12 +80,17 @@ addNewLanguageButton.Click();
 
 //Enter details
 IWebElement addLanguage = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
-addLanguage.SendKeys("lang_test3");
+addLanguage.SendKeys("lang_test4");
+
+//Applying Implicit Wait command for 10 seconds
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+
 
 IWebElement languageLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
 languageLevel.Click();
 
-IWebElement basicLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
+
+IWebElement basicLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[4]"));
 basicLevel.Click();
 
 //Enter add(save) button
