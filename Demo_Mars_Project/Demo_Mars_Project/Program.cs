@@ -98,4 +98,36 @@ IWebElement addButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-s
 addButton.Click();
 
 
-//Check if Language has been added successfully
+//Applying Implicit Wait command for 5 seconds
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+
+
+//Create new skill record
+
+//Navigate Skill tab
+IWebElement SkillTab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
+SkillTab.Click();
+
+//Click add new
+IWebElement addNewSkillButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/thead/tr/th[3]/div"));
+addNewSkillButton.Click();
+
+//Enter details
+IWebElement addSkill = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input"));
+addSkill.SendKeys("skill_test2");
+
+//Applying Implicit Wait command for 5 seconds
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+
+
+IWebElement SkillLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select"));
+SkillLevel.Click();
+
+
+IWebElement expertLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select/option[4]"));
+expertLevel.Click();
+
+//Enter add(save) button
+IWebElement addSkillButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
+addSkillButton.Click();
+
